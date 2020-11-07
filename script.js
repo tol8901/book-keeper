@@ -12,7 +12,27 @@ function showModal() {
     websiteNameEl.focus();
 }
 
+// Validate Form
+function validate(nameValue, urlValue) {
+    const expression = https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g;
+}
+
 // Modal Event Listener
 modalShow.addEventListener('click', showModal);
 modalClose.addEventListener('click', () => modal.classList.remove('show-modal'));
 window.addEventListener('click', (e) => (e.target === modal ? modal.classList.remove('show-modal') : false));
+
+// handle Data From Form
+function storeBookmark(e) {
+    e.preventDefault();
+    const nameValue = websiteNameEl.value;
+    let urlValue = websiteUrlEl.value;
+    if (!urlValue.includes('http://', 'https://')) {
+        urlValue = `https://${urlValue}`;
+    }
+    console.log(nameValue, urlValue);
+
+}
+
+// Event Listener
+bookmarkForm.addEventListener('submit', storeBookmark);
