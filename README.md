@@ -1,6 +1,6 @@
 # book-keeper
 # Short description
-It is a bookmark app, where you can add bookmarks and store them in your browser.
+It is an app for keep bookmarks, where you can store some web-links and its names into your browser.
 # How to use it
 1. For add a bookmark, you can press the button "ADD BOOKMARK". 
 2. In the modal window you can insert a name of the bookmark and a website URL. If you want to save it, just press the Submit button below in the window.
